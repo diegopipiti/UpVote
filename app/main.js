@@ -46,14 +46,23 @@ new Vue({
   data: {
     submissions: Seed.submissions
   },
-  /*computed: {
+  computed: {
     sortedSubmissions() {
       return this.submissions.sort((a, b) => {
         return b.votes - a.votes
       });
     }
   },
-  components: {
+  methods:{
+    upvote(submissionId){
+      const submission = this.submissions.find(
+        submission => submission.id === submissionId
+      );
+      submission.votes++;
+    }
+  }
+
+/*   components: {
     'submission-component': submissionComponent
-  }*/
+  } */
 });

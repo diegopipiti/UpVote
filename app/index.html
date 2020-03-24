@@ -17,7 +17,7 @@
     <h2 class="title has-text-centered dividing-header">UpVote!</h2>
 
     <div class="section">
-      <article v-for="submission in submissions" 
+      <article v-for="submission in sortedSubmissions" 
       v-bind:key = "submission.id"
       class="media">
           <figure class="media-left">
@@ -46,7 +46,7 @@
             </div>
           </div>
         <div class="media-right">
-          <span class="icon is-small">
+          <span class="icon is-small" v-on:click="upvote(submission.id)">
             <i class="fa fa-chevron-up"></i>
             <strong class="has-text-info">{{submission.votes}}</strong>
           </span>
