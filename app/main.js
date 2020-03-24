@@ -46,7 +46,7 @@ new Vue({
   data: {
     submissions: Seed.submissions
   },
-  computed: {
+  /*computed: {
     sortedSubmissions() {
       return this.submissions.sort((a, b) => {
         return b.votes - a.votes
@@ -55,5 +55,5 @@ new Vue({
   },
   components: {
     'submission-component': submissionComponent
-  }
+  }*/
 });
